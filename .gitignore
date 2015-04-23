@@ -28,7 +28,6 @@ build/Release
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
 node_modules
 
-
 scripts/azure.err
 scripts/id_rsa
 scripts/azureuser@dev01-6777f4u2.cloudapp.net
