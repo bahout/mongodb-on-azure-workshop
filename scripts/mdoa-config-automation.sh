@@ -5,7 +5,17 @@ sudo dpkg -i mongodb-mms-automation-agent-manager_1.7.0.992-1_amd64.deb
 sudo sed -i 's/mmsGroupId=@GROUP_ID@/mmsGroupId=5531ef0ae4b0ca8a5c62816b/g' /etc/mongodb-mms/automation-agent.config
 sudo sed -i 's/mmsApiKey=@API_KEY@/mmsApiKey=0fefea0de643d263c94cdf97fa63e06d/g' /etc/mongodb-mms/automation-agent.config
 
-sudo sfdisk /dev/sdc < ~/dev_sdc_config
+#sudo sfdisk /dev/sdc < ~/dev_sdc_config
+echo Partitioning...
+	sudo fdisk /dev/sdc <<ENDPARTITION > /tmp/fdisk.log 2>&1
+n
+p
+1
+
+
+w
+ENDPARTITION
+
 sudo mkfs -t ext4 /dev/sdc1
 sudo mkdir -p /data
 sudo mount /dev/sdc1 /data
