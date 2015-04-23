@@ -462,6 +462,14 @@ chmod +x *.sh
 ./azure_configure_vms.sh
 ```
 
+
+```
+scp -i mdoa -P 2200 *.sh azureuser@mdoa34b.cloudapp.net:
+scp -i mdoa -P 2200 mdoa* azureuser@mdoa34b.cloudapp.net:
+scp -i mdoa -P 2200 dev_sdc_config azureuser@mdoa34b.cloudapp.net:
+ssh -t -i mdoa -p 2200 azureuser@mdoa34b.cloudapp.net './azure_configure_vms.sh'
+```
+
 Answer yes to questions like 
 ```
 The authenticity of host '10.0.0.101 (10.0.0.101)' can't be established.
@@ -737,6 +745,18 @@ The VMs will be stopped in parallel.
 ```
 ./azure_start_cluster_vms.sh
 ```
+
+
+### Delete cluster VMs for local machine
+
+```
+scp -i mdoa -P 2203 azure_configure_vms.sh azureuser@mdoa34b.cloudapp.net:
+ssh -t -i id_rsa azureuser@dev01-6777f4u2.cloudapp.net './azure_delete_cluster_vms.sh'
+
+```
+
+
+
 
 NB: you may prefer to go to https://manage.windowsazure.com, Cloud Services, Dashboard and START
 The VMs will be stopped in parallel.

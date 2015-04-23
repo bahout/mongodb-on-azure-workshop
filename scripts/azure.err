@@ -1,0 +1,16 @@
+Thu Apr 23 2015 00:06:22 GMT+0200 (CEST):
+{ [Error: Windows Azure is currently performing an operation with x-ms-requestid 00d00e2938fd9722b2ef8ea1859b9e7e on this deployment that requires exclusive access.]
+  code: 'ConflictError',
+  statusCode: 409,
+  requestId: '187088a57802958aac15fe78841aca9d' }
+Error: Windows Azure is currently performing an operation with x-ms-requestid 00d00e2938fd9722b2ef8ea1859b9e7e on this deployment that requires exclusive access.
+    at Function.ServiceClient._normalizeError (/usr/local/azure/node_modules/azure-common/lib/services/serviceclient.js:809:23)
+    at /usr/local/azure/node_modules/azure-common/lib/services/filters/errorhandlingfilter.js:44:29
+    at Request._callback (/usr/local/azure/node_modules/azure-common/lib/http/request-pipeline.js:109:14)
+    at Request.self.callback (/usr/local/azure/node_modules/request/request.js:129:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/azure/node_modules/request/request.js:873:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/azure/node_modules/request/request.js:824:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16

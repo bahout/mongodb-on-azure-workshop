@@ -10,13 +10,13 @@ vmservice="mdoa34b"
 
 vmnumber=0
 
-while [ $vmnumber -lt 8 ]
+while [ $vmnumber -lt 4 ]
 do
 	vmname=$vmprefix$vmnumber
 	vmipaddress=10.0.0.$((100+$vmnumber))
 
 	echo "vm $vmname at $vmipaddress"
-	azure vm shutdown --dns-name $vmservice $vmname
-	
+	azure vm shutdown --dns-name $vmservice $vmname &
+
 	vmnumber=$((vmnumber+1))
 done
