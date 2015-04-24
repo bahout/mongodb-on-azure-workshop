@@ -10,7 +10,7 @@ vmservice="mdoa34b"
 
 vmnumber=0
 
-while [ $vmnumber -lt 4 ]
+while [ $vmnumber -lt 8 ]
 do
 	vmname=$vmprefix$vmnumber
 	vmipaddress=10.0.0.$((100+$vmnumber))
