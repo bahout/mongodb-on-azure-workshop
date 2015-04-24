@@ -17,7 +17,7 @@ vmservice="mdoa34b"
 #azure service create vmservice--location "North Europe"
 
 vmnumber=0
-while [ $vmnumber -lt 4 ]
+while [ $vmnumber -lt 1 ]
 do
 	vmname=$vmprefix$vmnumber
 	vmsshport=$((2200+$vmnumber))
