@@ -1,13 +1,28 @@
-Fri Apr 24 2015 10:35:18 GMT+0200 (CEST):
-[Error: location or affinity group is required for a new cloud service]
-Error: location or affinity group is required for a new cloud service
-    at createNewHostedService (/usr/local/azure/lib/commands/asm/vm/vmclient.js:4456:23)
-    at /usr/local/azure/lib/commands/asm/vm/vmclient.js:4561:13
-    at /usr/local/azure/node_modules/azure/node_modules/azure-mgmt-compute/lib/computeManagementClient.js:14023:16
-    at Parser.<anonymous> (/usr/local/azure/node_modules/azure-common/node_modules/xml2js/lib/xml2js.js:246:20)
-    at Parser.EventEmitter.emit (events.js:95:17)
-    at Object.saxParser.onclosetag (/usr/local/azure/node_modules/azure-common/node_modules/xml2js/lib/xml2js.js:225:24)
-    at emit (/usr/local/azure/node_modules/azure-common/node_modules/xml2js/node_modules/sax/lib/sax.js:589:33)
-    at emitNode (/usr/local/azure/node_modules/azure-common/node_modules/xml2js/node_modules/sax/lib/sax.js:594:3)
-    at closeTag (/usr/local/azure/node_modules/azure-common/node_modules/xml2js/node_modules/sax/lib/sax.js:834:5)
-    at Object.write (/usr/local/azure/node_modules/azure-common/node_modules/xml2js/node_modules/sax/lib/sax.js:1253:29)
+Fri Apr 24 2015 16:57:24 GMT+0200 (CEST):
+{ [Error: The specified DNS name is already taken.]
+  stack: [Getter/Setter],
+  code: 'ConflictError',
+  statusCode: 409,
+  requestId: 'cb3aab7a0c32995eb7a2f3616fa3db7e',
+  __frame: 
+   { name: '__1',
+     line: 41,
+     file: '/usr/local/azure/lib/commands/asm/service.js',
+     prev: undefined,
+     active: false,
+     offset: 44,
+     col: 8 },
+  rawStack: [Getter] }
+Error: The specified DNS name is already taken.
+    at Function.ServiceClient._normalizeError (/usr/local/azure/node_modules/azure-common/lib/services/serviceclient.js:809:23)
+    at /usr/local/azure/node_modules/azure-common/lib/services/filters/errorhandlingfilter.js:44:29
+    at Request._callback (/usr/local/azure/node_modules/azure-common/lib/http/request-pipeline.js:109:14)
+    at Request.self.callback (/usr/local/azure/node_modules/request/request.js:129:22)
+    at Request.EventEmitter.emit (events.js:98:17)
+    at Request.<anonymous> (/usr/local/azure/node_modules/request/request.js:873:14)
+    at Request.EventEmitter.emit (events.js:117:20)
+    at IncomingMessage.<anonymous> (/usr/local/azure/node_modules/request/request.js:824:12)
+    at IncomingMessage.EventEmitter.emit (events.js:117:20)
+    at _stream_readable.js:920:16
+    at __1 (/usr/local/azure/lib/commands/asm/service.js:85:8)
+

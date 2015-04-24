@@ -10,11 +10,11 @@ vmprefix="mdoa34-"
 # the following settings may be different for you:
 vmvnetnet="group mdoa mdoa" #you can get the value with the following command: azure network vnet list
 storageaccountname="mdoa34"
-vmservice="mdoa34b"
+vmservice="mdoa34c"
 
 
 #create service
-azure service create vmservice--location "North Europe"
+#azure service create $vmservice --location "North Europe"
 
 vmnumber=0
 while [ $vmnumber -lt 3 ]
