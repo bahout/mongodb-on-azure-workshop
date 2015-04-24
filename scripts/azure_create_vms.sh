@@ -14,7 +14,7 @@ vmservice="mdoa34b"
 
 
 #create service
-#azure service create vmservice--location "North Europe"
+azure service create vmservice--location "North Europe"
 
 vmnumber=0
 while [ $vmnumber -lt 3 ]

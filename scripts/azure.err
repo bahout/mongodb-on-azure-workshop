@@ -1,4 +1,4 @@
-Fri Apr 24 2015 03:16:10 GMT+0200 (CEST):
+Fri Apr 24 2015 10:35:18 GMT+0200 (CEST):
 [Error: location or affinity group is required for a new cloud service]
 Error: location or affinity group is required for a new cloud service
     at createNewHostedService (/usr/local/azure/lib/commands/asm/vm/vmclient.js:4456:23)
